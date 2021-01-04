@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    body {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .message-text-rec {
+      background-color: #3e3e3e;
+      color: #fff;
+      padding: 10px;
+      text-align: right;
+    }
+
+    .message-text {
+      padding: 10px;
+    }
+
+    .new-user {
+      text-align: center;
+      padding: 5px;
+      background: #e3e3e3;
+    }
+
+    /* li:nth-child(2n-1) {} */
+
+    #message {
+      width: 50%;
+      border: 0;
+      background: #e3e3e3;
+      padding: 10px;
+    }
+
+    #message-box {
+      width: 50%;
+    }
+
+    #form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  </style>
+  <script src="http://localhost:3456/socket.io/socket.io.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div id="message-box"></div>
+  <form id="form">
+    <input type="text" name="message" id="message" autocomplete="off" />
+  </form>
+</body>
+
+</html>
